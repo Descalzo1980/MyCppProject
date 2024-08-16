@@ -1,14 +1,12 @@
 #include <iostream>
-#include <locale>
-#include <windows.h>
+using namespace std;
 
-int main()
+int main() 
 {
+    // Устанавливаем локаль на русский
     setlocale(LC_ALL, "Russian");
-    SetConsoleOutputCP(1251);
-    SetConsoleCP(1251);
 
-    std::wcout << L"Привет C++" << std::endl;
+    std::wcout << "Стоит баба с жопой метр на метр\nВ очереди за продовольствием.\nОтрастить бы себе хyй\nВ километр\nИ доставить ей\nУдовольствие!\n" << std::endl;
 
     return 0;
 }
