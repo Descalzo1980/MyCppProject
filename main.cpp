@@ -15,4 +15,11 @@ int main()
     double d = 2.8;
     char t = 'K';
     cout <<c<<" "<<v<<" "<<b<<" "<<t<<endl;
+
+    const int DAYS_IN_WEEK = 7;
+    const char NEW_LINE = '\n';
+    const char TAB = '\t';
+    cout << DAYS_IN_WEEK << NEW_LINE;
+    cout << DAYS_IN_WEEK << TAB << TAB << DAYS_IN_WEEK;
+    cout << DAYS_IN_WEEK << NEW_LINE;
 }
