@@ -1,18 +1,19 @@
 #include <iostream>
-#include <locale>
 using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    int Var, Var2;
+ setlocale(LC_ALL, "Rus");
 
-    cout << "Введите первое число: ";
-    cin >> Var;
-    cout << "Введите второе число: ";
-    cin >> Var2;
-    cout << "Число 1 = " << Var << endl
-         << "Число 2 = " << Var2 << endl;
+ int num1, num2;
+ cout << "Введите первое число: ";
+ cin >> num1;
+ cout << "Введите второе число: ";
+ cin >> num2;
+ cout << "Ответ +: " << num1 + num2 << "\n";
+ cout << "Ответ *: " << num1 * num2 << "\n";
+ cout << "Ответ /: " << num1 / num2 << "\n";
+ cout << "Ответ -: " << num1 - num2 << "\n";
 }
 
 // formate shift + alt + f
