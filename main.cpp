@@ -27,6 +27,12 @@ cout << g << endl;
     cout << "Сумма трех чисел равна = "<< a + b + c << endl;
     cout << "Произведение трех чисел равно = "<< a * b *c << endl;
     cout << "Среднее арифметическое трех чисел равно = "<< (double)(a + b + c) / 3 << endl;
+    int q = 1;
+    q += q;
+    cout << "Here = " << q << endl;
+    int w = 1,e;
+    e = ++w*w;
+    cout << e << endl;
 }
 
 // formate shift + alt + f
