@@ -8,9 +8,11 @@ int main()
 
     bool rain = false;
     
-    if(rain) {
+    if(rain) 
+    {
         MessageBox(NULL, TEXT("It is rain!"), TEXT("If rain!"), MB_YESNO | MB_ICONQUESTION);
-    } else {
+    } else 
+    {
         MessageBox(NULL,  TEXT("It is sun"), TEXT("If sun"), MB_OKCANCEL | MB_ICONINFORMATION);
     }
 
