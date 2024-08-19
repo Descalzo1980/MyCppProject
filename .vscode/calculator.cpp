@@ -32,7 +32,7 @@ int main()
             break;
         case 4:
             if (b != 0)
-                cout << "Результат деления: " << a / b << endl;
+                cout << "Результат деления: " << (float) a / b << endl;
             else
                 cout << "Ошибка: деление на ноль!" << endl;
             break;
