@@ -3,48 +3,49 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "ru");
+    setlocale(LC_ALL, "en_US.UTF-8");
     int a, b, selections;
     char repeat;
 
     do
     {
-        cout << "Введите 2 числа" << endl;
+        cout << "Enter 2 numbers" << endl;
         cin >> a >> b;
-        cout << "Выберите математическую операцию" << endl
-             << "1. Сложение" << endl
-             << "2. Вычитание" << endl
-             << "3. Умножение" << endl
-             << "4. Деление" << endl;
+        cout << "Choose a mathematical operation" << endl
+             << "1. Addition" << endl
+             << "2. Subtraction" << endl
+             << "3. Multiplication" << endl
+             << "4. Division" << endl;
 
         cin >> selections;
 
         switch (selections)
         {
         case 1:
-            cout << "Результат сложения: " << a + b << endl;
+            cout << "Result of addition: " << a + b << endl;
             break;
         case 2:
-            cout << "Результат вычитания: " << a - b << endl;
+            cout << "Result of subtraction: " << a - b << endl;
             break;
         case 3:
-            cout << "Результат умножения: " << a * b << endl;
+            cout << "Result of multiplication: " << a * b << endl;
             break;
         case 4:
             if (b != 0)
-                cout << "Результат деления: " << (float) a / b << endl;
+                cout << "Result of division: " << (float) a / b << endl;
             else
-                cout << "Ошибка: деление на ноль!" << endl;
+                cout << "Error: division by zero!" << endl;
             break;
         default:
-            cout << "Ошибка: неверный выбор операции!" << endl;
+            cout << "Error: invalid operation selection!" << endl;
             break;
         }
 
-        cout << "Хотите запустить программу снова? (y/n): ";
+        cout << "Do you want to run the program again? (y/n): ";
         cin >> repeat;
 
     } while (repeat == 'y' || repeat == 'Y');
 
     return 0;
+    system("pause");
 }
