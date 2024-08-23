@@ -1,0 +1,3 @@
+D:/MyCppProject/build/CMakeFiles/MyCppProject.dir
+D:/MyCppProject/build/CMakeFiles/edit_cache.dir
+D:/MyCppProject/build/CMakeFiles/rebuild_cache.dir

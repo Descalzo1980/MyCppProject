@@ -1,0 +1,104 @@
+[
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\about_switch.cpp.obj -c D:\\MyCppProject\\.vscode\\about_switch.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\about_switch.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\about_switch.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\arrays.cpp.obj -c D:\\MyCppProject\\.vscode\\arrays.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\arrays.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\arrays.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\calculator.cpp.obj -c D:\\MyCppProject\\.vscode\\calculator.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\calculator.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\calculator.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\cont.cpp.obj -c D:\\MyCppProject\\.vscode\\cont.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\cont.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\cont.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\debagger.cpp.obj -c D:\\MyCppProject\\.vscode\\debagger.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\debagger.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\debagger.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\dowhile.cpp.obj -c D:\\MyCppProject\\.vscode\\dowhile.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\dowhile.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\dowhile.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\enter_sign.cpp.obj -c D:\\MyCppProject\\.vscode\\enter_sign.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\enter_sign.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\enter_sign.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\for.cpp.obj -c D:\\MyCppProject\\.vscode\\for.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\for.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\for.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\goto.cpp.obj -c D:\\MyCppProject\\.vscode\\goto.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\goto.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\goto.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\nested_loops_copy.cpp.obj -c \"D:\\MyCppProject\\.vscode\\nested_loops copy.cpp\"",
+  "file": "D:\\MyCppProject\\.vscode\\nested_loops copy.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\nested_loops_copy.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\nested_loops.cpp.obj -c D:\\MyCppProject\\.vscode\\nested_loops.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\nested_loops.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\nested_loops.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\parity.cpp.obj -c D:\\MyCppProject\\.vscode\\parity.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\parity.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\parity.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\.vscode\\while.cpp.obj -c D:\\MyCppProject\\.vscode\\while.cpp",
+  "file": "D:\\MyCppProject\\.vscode\\while.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\.vscode\\while.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\boolean.cpp.obj -c D:\\MyCppProject\\boolean.cpp",
+  "file": "D:\\MyCppProject\\boolean.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\boolean.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\debagger.cpp.obj -c D:\\MyCppProject\\debagger.cpp",
+  "file": "D:\\MyCppProject\\debagger.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\debagger.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\ifelse.cpp.obj -c D:\\MyCppProject\\ifelse.cpp",
+  "file": "D:\\MyCppProject\\ifelse.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\ifelse.cpp.obj"
+},
+{
+  "directory": "D:/MyCppProject/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++14 -o CMakeFiles\\MyCppProject.dir\\main.cpp.obj -c D:\\MyCppProject\\main.cpp",
+  "file": "D:\\MyCppProject\\main.cpp",
+  "output": "CMakeFiles\\MyCppProject.dir\\main.cpp.obj"
+}
+]

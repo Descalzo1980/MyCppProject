@@ -1,0 +1,19 @@
+# ninja log v6
+23	552	7460630796425265	CMakeFiles/MyCppProject.dir/.vscode/debagger.cpp.obj	773c7d559b0c941c
+5	559	7460630796251279	CMakeFiles/MyCppProject.dir/.vscode/about_switch.cpp.obj	559282613446a802
+14	563	7460630796336947	CMakeFiles/MyCppProject.dir/.vscode/calculator.cpp.obj	8d5f6b89602c2596
+26	567	7460630796453319	CMakeFiles/MyCppProject.dir/.vscode/dowhile.cpp.obj	d1e651159effe4ee
+18	571	7460630796376979	CMakeFiles/MyCppProject.dir/.vscode/cont.cpp.obj	2682a32d4036e1b1
+554	1438	7460630801737441	CMakeFiles/MyCppProject.dir/.vscode/enter_sign.cpp.obj	c62a0f0db28316d5
+559	1448	7460630801789731	CMakeFiles/MyCppProject.dir/.vscode/for.cpp.obj	4f6fc72f39d44346
+563	1454	7460630801823206	CMakeFiles/MyCppProject.dir/.vscode/goto.cpp.obj	cad661cec8ee90f0
+1448	1929	7460630810678349	CMakeFiles/MyCppProject.dir/.vscode/while.cpp.obj	a5b2707e998024
+1454	1934	7460630810743003	CMakeFiles/MyCppProject.dir/boolean.cpp.obj	73597e4dd8734bd6
+1438	1938	7460630810570452	CMakeFiles/MyCppProject.dir/.vscode/parity.cpp.obj	fe89a6dcea856ca7
+1929	2400	7460630815484997	CMakeFiles/MyCppProject.dir/debagger.cpp.obj	be6c1af2eb0a9072
+1938	2406	7460630815570188	CMakeFiles/MyCppProject.dir/main.cpp.obj	15ce53a0884b9373
+10	2556	7460630796292042	CMakeFiles/MyCppProject.dir/.vscode/arrays.cpp.obj	ffed626f78e3969
+567	2901	7460630801869661	CMakeFiles/MyCppProject.dir/.vscode/nested_loops_copy.cpp.obj	35125fd8275c7710
+571	2913	7460630801904993	CMakeFiles/MyCppProject.dir/.vscode/nested_loops.cpp.obj	12dfc61f48bb7811
+1934	3461	7460630815535059	CMakeFiles/MyCppProject.dir/ifelse.cpp.obj	f3dc460c3ec0534f
+6	1438	7460631664395536	CMakeFiles/MyCppProject.dir/.vscode/arrays.cpp.obj	ffed626f78e3969
