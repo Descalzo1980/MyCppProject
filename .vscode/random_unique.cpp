@@ -2,8 +2,7 @@
 #include <locale>
 #include <Windows.h>
 #include <ctime>
-#include <set>
-#include <vector>
+
 using namespace std;
 
 int main()
@@ -17,33 +16,29 @@ int main()
     const int SIZE = 10;
     int arr[SIZE];
 
-    bool unique;
-
     for (int i = 0; i < SIZE;)
     {
-        unique = false;
-        int new_ranmom_value = rand() % 20;
+        bool isDuplicate = false;
+        int newRandomValue = rand() % 20;
         for (int j = 0; j < i; j++)
         {
-            if (arr[j] == new_ranmom_value)
+            if (arr[j] == newRandomValue)
             {
-                unique = true;
+                isDuplicate = true;
                 break;
             }
         }
-        if (!unique)
+        if (!isDuplicate)
         {
-            arr[i] = new_ranmom_value;
+            arr[i] = newRandomValue;
             i++;
         }
     }
-
     for (int i = 0; i < SIZE; i++)
     {
         cout << arr[i] << endl;
     }
 
-    /*     Sleep(3000); */
     system("pause");
 
     return 0;
