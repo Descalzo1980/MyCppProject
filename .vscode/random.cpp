@@ -25,7 +25,7 @@ int main()
 
     for (int i = 0; i < SIZE; i++)
     {
-        arr[i] = rand() % 100;
+        arr[i] = rand() % 20;
 
     }
 
