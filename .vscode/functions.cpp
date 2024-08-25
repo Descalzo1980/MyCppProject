@@ -2,16 +2,22 @@
 #include <locale>
 #include <Windows.h>
 
-
 using namespace std;
 
-int Sum(int a, int b){
-    return a + b;
+int Sum(int a, int b, int c = 5)
+{
+    return a + b + c;
 }
 
 void foo()
 {
     cout << "Я функция, я говорю кря" << endl;
+}
+
+int Foo(int a)
+{
+    return a++; // 1
+    return ++a; // 2 
 }
 
 int main()
@@ -20,18 +26,18 @@ int main()
     SetConsoleOutputCP(65001);
     setlocale(LC_ALL, "ru_RU.UTF-8");
 
-    cout << Sum(2,3) << endl;
+    std::cout << Sum(2, 3) << std::endl;
 
     foo();
 
-    for (int i = 0; i < 10; i++)
-    {
-        foo();
-    }
+    int value = 1;
+
+    value = Foo(value);
+
+    cout << value << endl;
     
 
     system("pause");
 
     return 0;
-
 }
