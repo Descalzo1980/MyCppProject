@@ -55,5 +55,6 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "codecvt": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
