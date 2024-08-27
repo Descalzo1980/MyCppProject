@@ -15,14 +15,15 @@
             "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         },
         {
             "name": "cpp",
             "includePath": [
                 "${workspaceFolder}/**",
                 "C:/msys64/mingw64/include",
-                "C:/msys64/mingw64/include/c++/14.1.0"
+                "C:/msys64/mingw64/include/c++/14.2.0"
             ],
             "defines": [
                 "_DEBUG",
