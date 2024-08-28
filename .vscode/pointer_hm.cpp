@@ -18,7 +18,7 @@ int main()
     SetConsoleOutputCP(65001);
     setlocale(LC_ALL, "ru_RU.UTF-8");
 
-    int a, b;
+    int a = 22, b = 33;
 /*     cout << "Enter number a " << endl;
     cin >> a;
     cout << "Enter number b " << endl;
@@ -26,16 +26,10 @@ int main()
     Swap(&a, &b);
     cout << "Reverce number " << "a = " << a << "\n" << " b = "<<  b << endl; */
 
-
-    std::cout << "Enter number a " << std::endl;
-    std::cin >> a;
-    std::cout << "Enter number b " << std::endl;
-    std::cin >> b;
-
-    std::swap(a, b);
-
-    std::cout << "Reversed numbers: a = " << a << "\n" << "b = " << b << std::endl;
-
+    cout << "Before a = " << a << ",Before b = " << b << endl;
+    
+    Swap(&a, &b);
+    cout << "After a = " << a << ",After b = " << b << endl;
     system("pause");
     return 0;
 }
