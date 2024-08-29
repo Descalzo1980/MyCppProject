@@ -7,40 +7,47 @@ using namespace std;
 
 int main()
 {
-
-    int size = 0;
-    cout << "Enter array size: " << endl;
-    cin >> size;
-    int *arr = new int[size];
-
-    for (int i = 0; i < size; i++)
+    int rows;
+    int columns;
+    cout << "enter rows" << endl;
+    cin >> rows;
+    cout << "enter columns" << endl;
+    cin >> columns;
+    int **arr = new int* [rows];  
+    
+    for (int i = 0; i < rows; i++)
     {
-        arr[i] = rand() % 20;
+        arr[i] = new int [columns]; 
+    }
+    ///////////////////////////////////////////////
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            arr[i][j] = rand() % 20;
+        }
+
+    }
+    //////////////////////////////////////////////
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            cout << arr[i][j] << "\t";
+        }
+            cout << endl;
     }
 
-    for (int i = 0; i <= size; i++)
-/*
-5
-1       0x691ce0
-7       0x691ce4
-14      0x691ce8
-0       0x691cec
-9       0x691cf0 
 
--1414812757     0x691cf4  
-поставил = 
-и обратился не к своему элементу в 
-массиве на 5 элементов
-*/
+    //////////////////////////////////////////////
+    for (int i = 0; i < rows; i++)
     {
-        cout << arr[i] << "\t";
-        /*         cout << *(arr + i) << endl; */
-        cout << arr + i << endl;
+        delete [] arr[i]; // а вот это удаляем данные
     }
+    
+    delete [] arr; // это удаляем основной массив, а надо еще данные, или утечка!
 
-    delete[] arr;
-
-    // как положить всю оперативку? создать большой массив)
     system("pause");
     return 0;
 }
