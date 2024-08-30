@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void foo(char *str)
+void foo(const char *str)
 {
    cout << strlen(str) << endl; 
 }
