@@ -19,7 +19,7 @@ int main()
 
     cout << (char)a << endl;
     cout << b << endl; // 34 это не явно преобразование
-
+    cout << a / b << endl; // компилятор будет выводить больший тип данных
     system("pause");
     return 0;
 }
