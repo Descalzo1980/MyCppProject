@@ -7,12 +7,16 @@
 
 using namespace std;
 
+void foo(char *str)
+{
+   cout << strlen(str) << endl; 
+}
 
 int main()
 {
     
     char str[] = "Hello";
-
+    foo(str);
     const char *myString = str;
 
     cout << myString << endl;
