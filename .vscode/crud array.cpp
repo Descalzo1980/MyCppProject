@@ -41,6 +41,21 @@ void push_back(int *&arr, int &size, const int value)
     arr = newArray;
 }
 
+void push_front(int *&arr, int &size, const int value)
+{
+
+    int *newArray = new int[size + 1];
+    newArray[0] = value;
+    for (int i = 0; i < size; i++)
+    {
+        newArray[i + 1] = arr[i];
+    }
+
+    size++;
+    delete[] arr;
+    arr = newArray;
+}
+
 void pop_back(int *&arr, int &size)
 {
     size--;
@@ -49,6 +64,18 @@ void pop_back(int *&arr, int &size)
     for (int i = 0; i < size; i++)
     {
         newArray[i] = arr[i];
+    }
+    delete[] arr;
+    arr = newArray;
+}
+void pop_front(int *&arr, int &size)
+{
+    size--;
+    int *newArray = new int[size];
+
+    for (int i = 0; i < size; i++)
+    {
+        newArray[i] = arr[i +1];
     }
     delete[] arr;
     arr = newArray;
@@ -62,10 +89,10 @@ int main()
 
     FillArray(arr, size);
     ShowArray(arr, size);
+
     push_back(arr, size, 111);
     ShowArray(arr, size);
-    pop_back(arr, size);
-    ShowArray(arr, size);
+
     pop_back(arr, size);
     ShowArray(arr, size);
 
@@ -75,10 +102,11 @@ int main()
     pop_front(arr, size);
     ShowArray(arr, size);
 
+/* 
     push_diff(arr, size, 111, 2);
     ShowArray(arr, size);
     pop_diff(arr, size, 2);
-    ShowArray(arr, size);
+    ShowArray(arr, size); */
     delete[] arr;
     system("pause");
     return 0;
