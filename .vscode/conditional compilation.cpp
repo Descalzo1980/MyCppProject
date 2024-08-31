@@ -5,9 +5,7 @@
 #include <string>
 #include <cstring>
 #include <Windows.h>
-#define PI 3.14
-#define tab "\t"
-
+#define DEBUG
 using namespace std;
 
 
@@ -18,9 +16,11 @@ int main()
   SetConsoleOutputCP(65001);
   setlocale(LC_ALL, "ru_RU.UTF-8");
   
-  cout << PI << endl;
-
-  cout << "text" << tab << "text"<< endl;
+#ifdef DEBUG
+    cout << "Есть дебаг" << endl;
+#else 
+    cout << "Нет дебаг" << endl;
+#endif
 
   system("pause");
   return 0;
