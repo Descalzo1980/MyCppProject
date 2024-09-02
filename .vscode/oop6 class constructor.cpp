@@ -27,6 +27,47 @@ private:
   }
 };
 
+class Point
+{
+
+private:
+  int x;
+  int y;
+public:
+
+  Point(int valueX, int valueY)
+  {
+    x = valueX;
+    y = valueY;
+  }
+
+  int GetY()
+  {
+    return y;
+  }
+
+  void SetY(int y)
+  {
+    this->y = y * 2;
+  }
+
+  int GetX()
+  {
+    return x;
+  }
+
+  void SetX(int x)
+  {
+    this->x = x * 2;
+  }
+
+  void Print()
+  {
+    cout << "X = " << x << "\t Y = " << y << endl << endl;
+  }
+
+};
+
 int main()
 {
 
@@ -36,6 +77,13 @@ int main()
 
   CoffeGrinder coffeGrinder;
   coffeGrinder.Start();
+
+
+  Point point(5,44);
+  point.Print();
+
+  Point point2(33,66);
+  point2.Print();
 
   system("pause");
   return 0;
