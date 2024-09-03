@@ -36,6 +36,7 @@ public:
   void Print()
   {
     cout << "X = " << x << "\t Y = " << y << endl << endl;
+    cout << this << "constructor" << endl;
   }
 
 };
