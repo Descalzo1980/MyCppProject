@@ -7,6 +7,8 @@
             "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
                 "-g",
+                "-include",
+                "D:/MyCppProject/.vscode/stdafx.h",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe"
@@ -24,6 +26,8 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                "-include",
+                "D:/MyCppProject/.vscode/stdafx.h",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
