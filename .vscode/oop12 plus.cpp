@@ -73,9 +73,13 @@ public:
 class TestClass
 {
 public:
+  int & operator[](int index)
+  {
+    return arr[index];
+  }
 private:
-  int arr[]{5, 44, 777, 789, 99};
-}
+  int arr[5]{5, 44, 777, 789, 99};
+};
 
 int
 main()
@@ -84,20 +88,11 @@ main()
   SetConsoleOutputCP(65001);
   setlocale(LC_ALL, "ru_RU.UTF-8");
 
-  Point a(1, 1);
-
-  Point b = a++;  // сначала присвоится, потом увеличится
-  Point b1 = ++a; // сначала увеличится, потом присвоится
-
-  cout << b << endl;
-  cout << b1 << endl;
-
-  Point b2 = a--;
-  Point b3 = --a;
-
-  cout << b2 << endl;
-  cout << b3 << endl;
-
+  TestClass a;
+  cout << a[0] << endl;
+  a[0] = 100;
+  cout << a[0] << endl;
+  
   system("pause");
   return 0;
 }
