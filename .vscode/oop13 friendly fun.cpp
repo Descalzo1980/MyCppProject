@@ -105,6 +105,32 @@ void ChangeX(Point &value, Test &valueTest)
   valueTest.Data = -5555;
 }
 
+class MyNextClass
+
+{
+private:
+  
+public:
+  MyNextClass();
+  ~MyNextClass();
+
+  void PrintMessage();
+
+};
+
+MyNextClass::MyNextClass()
+{
+}
+
+MyNextClass::~MyNextClass()
+{
+}
+
+void MyNextClass::PrintMessage()
+{
+  cout << "Hello MyNextClass" << endl;
+}
+
 int main()
 {
   SetConsoleCP(65001);
@@ -122,6 +148,10 @@ int main()
   Test test;
   ChangeX(point,test);
   point.Print();
+
+  MyNextClass MyNextClass;
+  MyNextClass.PrintMessage();
+
   system("pause");
   return 0;
 }
