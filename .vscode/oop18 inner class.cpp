@@ -116,11 +116,3 @@ main()
   system("pause");
   return 0;
 }
-
-void Human::takeApple(Apple &apple)
-{
-  apple.color = "Blue"; // пока, инкапсуляция))
-  cout << "TakeApple " << endl
-       << "Вес яблока " << apple.weight << endl
-       << "Цвет яблока " << apple.color << endl;
-};
