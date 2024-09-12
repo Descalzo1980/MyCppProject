@@ -6,40 +6,44 @@ using namespace std;
 
 class A
 {
-public:
-  string msgOne = "Сообщение один"; // доступ везде
-
-private:
-  string msgTwo = "Сообщение два"; // нигде кроме класса в котором создали
-
-protected:
-  string msgThree = "Сообщение три"; // можно в классах наследниках, в объектах фигос
-};
-// тут public -> public
-// если private -> всё станет private
-// если protected -> то станет private
-
-// https://studfile.net/preview/4379462/
-class B : public A 
-{
   public:
-  void PrintMsg()
+  A()
   {
-    cout << msgOne << endl;
-/*     cout << msgTwo << endl;  */
-  cout << msgThree << endl;
+    cout << "Вызвался конструктор А" << endl;
   }
 };
 
-int
-main()
+class B : public A 
+{
+  public:
+  B()
+  {
+    cout << "Вызвался конструктор В" << endl;
+  }
+};
+
+class C : public B 
+{
+  public:
+  C()
+  {
+    cout << "Вызвался конструктор C" << endl;
+  }
+};
+
+int main()
 {
   SetConsoleCP(65001);
   SetConsoleOutputCP(65001);
   setlocale(LC_ALL, "ru_RU.UTF-8");
 
-  B b;
-  b.PrintMsg();
+    int a, b;
+    std::cin >> a >> b;
+
+    int sum = a + b; 
+
+    std::cout << "Sum: " << sum << std::endl;
+
   system("pause");
   return 0;
 }
