@@ -6,28 +6,40 @@ using namespace std;
 
 class A
 {
-  public:
+public:
   A()
   {
     cout << "Вызвался конструктор А" << endl;
   }
+  ~A()
+  {
+    cout << "Вызвался деструктор А" << endl;
+  }
 };
 
-class B : public A 
+class B : public A
 {
-  public:
+public:
   B()
   {
     cout << "Вызвался конструктор В" << endl;
   }
+  ~B()
+  {
+    cout << "Вызвался деструктор B" << endl;
+  }
 };
 
-class C : public B 
+class C : public B
 {
-  public:
+public:
   C()
   {
     cout << "Вызвался конструктор C" << endl;
+  }
+  ~C()
+  {
+    cout << "Вызвался деструктор C" << endl;
   }
 };
 
@@ -37,12 +49,16 @@ int main()
   SetConsoleOutputCP(65001);
   setlocale(LC_ALL, "ru_RU.UTF-8");
 
-    int a, b;
-    std::cin >> a >> b;
+  // int a, b;
+  // std::cin >> a >> b;
 
-    int sum = a + b; 
+  // int sum = a + b;
 
-    std::cout << "Sum: " << sum << std::endl;
+  // std::cout << "Sum: " << sum << std::endl;
+
+  {
+    C c; // a b c c b a
+  }
 
   system("pause");
   return 0;
