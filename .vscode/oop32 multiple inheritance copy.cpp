@@ -5,7 +5,7 @@
 using namespace std;
 
 /*
-  множественное наследование
+Порядок вызова конструкторов при множественном наследовании
  */
 class Car
 {
@@ -14,7 +14,8 @@ public:
   {
     cout << "Вызван конструктор Car" << endl;
   }
-  string str = "Я поле класса машина" void Drive()
+  string str = "Я поле класса машина";
+  void Drive()
   {
     cout << "Я еду" << endl;
   }
@@ -27,18 +28,20 @@ public:
   {
     cout << "Вызван конструктор AirPlan" << endl;
   }
-  string str2 = "Я поле класса самолет" void Fly()
+  string str2 = "Я поле класса самолет";
+  void Fly()
   {
     cout << "Я лечу" << endl;
   }
 };
 
-class FlyingCar : public Car, public AirPlan
+class FlyingCar : public Car, public AirPlan 
+/* порядок наследования важен, разный порядок вывоза конструкторов */
 {
 public:
   FlyingCar()
   {
-        cout << "Вызван конструктор FlyingCar" << endl;
+    cout << "Вызван конструктор FlyingCar" << endl;
   }
 };
 
@@ -49,10 +52,7 @@ int main()
   setlocale(LC_ALL, "ru_RU.UTF-8");
 
   {
-
-
     FlyingCar fc;
-
   }
 
   system("pause");
