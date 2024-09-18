@@ -46,15 +46,62 @@ public:
   }
 };
 
-int
-main()
+class Character
+{
+public:
+  Character()
+  {
+    cout << "конструктор Character" << endl;
+  }
+  int HP; // проблема с HP из за множественного наследования
+};
+
+class Orc : public virtual Character // add virtual
+{
+public:
+  Orc()
+  {
+    cout << "конструктор Orc" << endl;
+  }
+};
+
+class Warrior : public virtual Character
+{
+public:
+  Warrior()
+  {
+    cout << "конструктор Warrior" << endl;
+  }
+};
+
+class OrcWarrior : public Orc, public Warrior
+{
+public:
+  OrcWarrior()
+  {
+    cout << "конструктор OrcWarrior" << endl;
+  }
+};
+
+/*
+конструктор Character
+конструктор Orc
+конструктор Warrior
+конструктор OrcWarrior
+после добавления virtual нет два раза вызова Character,
+ ромбовидное и виртуальное наследование в действии
+ */
+
+int main()
 {
   SetConsoleCP(65001);
   SetConsoleOutputCP(65001);
   setlocale(LC_ALL, "ru_RU.UTF-8");
 
   {
-    GraphicCard gc("AMD", "Samsung");
+    /*     GraphicCard gc("AMD", "Samsung"); */
+
+    OrcWarrior OrcWarrior;
   }
 
   system("pause");
