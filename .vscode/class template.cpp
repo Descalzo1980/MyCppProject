@@ -26,7 +26,8 @@ private:
 };
 
 /* template <typename T1,typename T2 = int> */
-template <typename T1, typename T2>
+template <class T1, class T2>
+/* template <typename T1, typename T2> */
 class MyClass
 {
 public:
