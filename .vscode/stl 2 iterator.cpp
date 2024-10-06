@@ -81,7 +81,8 @@ int main()
 
     advance(eraseit, 2);
 
-    myVector.erase(eraseit); // удалит элемент на который указывает
+/*     myVector.erase(eraseit); // удалит элемент на который указывает
+ */    myVector.erase(eraseit, eraseit+3); // диапазон
 
     for (secondit = myVector.begin(); secondit != myVector.end(); ++secondit)
     {
