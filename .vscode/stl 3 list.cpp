@@ -32,6 +32,12 @@ int main()
 
     list<int> myList = {55, 12, 33, 55, 55, 44, 55};
 
+    list<int> myList2 = {1,2,3,4,5};
+
+    myList.assign(myList2.begin(),myList2.end());
+
+    Print(myList);
+
     /*     myList.push_back(5);
         myList.push_front(151);
 
@@ -60,7 +66,7 @@ int main()
 
         myList.clear(); */
 
-    auto it = myList.begin();
+/*     auto it = myList.begin();
 
     advance(it, 3);
 
@@ -77,7 +83,7 @@ int main()
 
     cout << "assign" << endl;
     myList.assign(3, 66666666);
-    Print(myList);
+    Print(myList); */
     system("pause");
     return 0;
 }
