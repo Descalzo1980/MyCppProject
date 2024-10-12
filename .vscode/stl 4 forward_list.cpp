@@ -36,12 +36,17 @@ int main()
             cout << el << endl;
         } */
 
-    /*     forward_list<int>::iterator it = fl.before_begin(); // до коллекции */
+    /*     forward_list<int>::iterator it = fl.before_begin(); // 
+    
+    до начала коллекции это надо для стирания первого элемента, потому что односвязный список же*/
+
     forward_list<int>::iterator it = fl.begin(); // коллекции
 
     /*     it++; */
 
-    fl.insert_after(it, 9999);
+/*     fl.insert_after(it, 9999); */
+
+    fl.erase_after(it); // удалит следующий элемент после it
 
     for (auto el : fl)
     {
@@ -50,7 +55,7 @@ int main()
 
     // it--; а вот так нельзя, список односвязный, если надо, то тогда list
 
-    cout << *it << endl;
+/*     cout << *it << endl; */
 
     system("pause");
     return 0;
