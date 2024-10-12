@@ -23,18 +23,34 @@ int main()
 
     forward_list<int> fl = {1, 2, 3, 4, 5};
 
-    for (auto i = fl.begin(); i != fl.end(); i++)
+    /*     for (auto i = fl.begin(); i != fl.end(); i++)
+        {
+            cout << *i << endl;
+        } */
+    /*
+        fl.push_front(77);
+        fl.push_front(88); */
+
+    /*     for (auto el: fl)
+        {
+            cout << el << endl;
+        } */
+
+    /*     forward_list<int>::iterator it = fl.before_begin(); // до коллекции */
+    forward_list<int>::iterator it = fl.begin(); // коллекции
+
+    /*     it++; */
+
+    fl.insert_after(it, 9999);
+
+    for (auto el : fl)
     {
-        cout << *i << endl;
+        cout << el << endl;
     }
 
-    fl.push_front(77);
-    fl.push_front(88);
+    // it--; а вот так нельзя, список односвязный, если надо, то тогда list
 
-    for (auto i = fl.begin(); i != fl.end(); i++)
-    {
-        cout << *i << endl;
-    }
+    cout << *it << endl;
 
     system("pause");
     return 0;
