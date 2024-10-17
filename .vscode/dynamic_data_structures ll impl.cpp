@@ -23,6 +23,12 @@ public:
     void push_back(T data);
     void pop_front();
     void clear();
+
+    void push_front(T data);
+    void pop_back();
+    void insert(T data, int index);
+    void removeAt(int index);
+
     int getSize() { return Size; }
     T &operator[](const int index);
 
@@ -106,6 +112,65 @@ T &List<T>::operator[](const int index)
     }
 }
 
+template <typename T>
+void List<T>::push_front(T data)
+{
+    head = new Node<T>(data, head);
+    Size++;
+}
+
+template <typename T>
+void List<T>::insert(T data, int index)
+{
+    if (index == 0)
+    {
+        push_front(data);
+    }
+    else
+    {
+        Node<T> *previous = this->head;
+
+        for (int i = 0; i < index - 1; i++)
+        {
+            previous = previous->pNext;
+        }
+
+        previous->pNext = new Node<T>(data, previous->pNext);
+
+        Size++;
+    }
+}
+
+template <typename T>
+void List<T>::removeAt(int index)
+{
+    if (index == 0)
+    {
+        pop_front();
+    }
+    else
+    {
+        Node<T> *previous = this->head;
+
+        for (int i = 0; i < index - 1; i++)
+        {
+            previous = previous->pNext;
+        }
+
+        Node<T> *toDelete = previous->pNext;
+
+        previous->pNext = toDelete->pNext;
+        delete toDelete;
+        Size--;
+    }
+}
+
+template <typename T>
+void List<T>::pop_back()
+{
+    removeAt(Size - 1);
+}
+
 int main()
 {
 
@@ -122,12 +187,12 @@ int main()
         cout << lst[2] << endl; */
 
     int numbersCount;
-    lst.push_back(44);
-    lst.push_back(55);
-    lst.push_back(66);
-    lst.push_back(77);
-    lst.push_back(88);
-    lst.push_back(99);
+    /*     lst.push_back(44);
+        lst.push_back(55);
+        lst.push_back(66);
+        lst.push_back(77);
+        lst.push_back(88);
+        lst.push_back(99); */
 
     /*     for (int i = 0; i < numbersCount; i++)
         {
@@ -139,11 +204,53 @@ int main()
             cout << lst[i] << endl;
         } */
 
-    cout << endl
-         << "Элементов в списке " << endl
-         << lst.getSize() << " выполняю pop_front" << endl;
+    /*     cout << endl
+             << "Элементов в списке " << endl
+             << lst.getSize() << " выполняю pop_front" << endl;
 
-    lst.pop_front();
+        lst.pop_front();
+
+        for (int i = 0; i < lst.getSize(); i++)
+        {
+            cout << lst[i] << endl;
+        } */
+
+    /*     cout << endl
+             << "Элементов в списке" << endl
+             << lst.getSize() << endl;
+
+        cout << endl
+             << "Элементов в списке " << endl
+             << lst.getSize() << " выполняю clear" << endl;
+
+        lst.clear();
+
+        cout << endl
+             << "Элементов в списке" << endl
+             << lst.getSize() << endl; */
+
+    lst.push_front(777);
+    lst.push_front(888);
+    lst.push_front(999);
+    lst.push_front(1000);
+
+    for (int i = 0; i < lst.getSize(); i++)
+    {
+        cout << lst[i] << endl;
+    }
+
+    /*     cout << endl
+             << "insert" << endl;
+
+        lst.insert(99, 1);
+
+        for (int i = 0; i < lst.getSize(); i++)
+        {
+            cout << lst[i] << endl;
+        } */
+    cout << endl
+         << "removeAt" << endl;
+    lst.removeAt(1);
 
     for (int i = 0; i < lst.getSize(); i++)
     {
@@ -151,18 +258,14 @@ int main()
     }
 
     cout << endl
-         << "Элементов в списке" << endl
-         << lst.getSize() << endl;
+         << "pop_back" << endl;
 
-    cout << endl
-         << "Элементов в списке " << endl
-         << lst.getSize() << " выполняю clear" << endl;
+    lst.pop_back();
 
-    lst.clear();
-
-    cout << endl
-         << "Элементов в списке" << endl
-         << lst.getSize() << endl;
+    for (int i = 0; i < lst.getSize(); i++)
+    {
+        cout << lst[i] << endl;
+    }
 
     system("pause");
     return 0;
