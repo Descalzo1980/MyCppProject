@@ -21,8 +21,9 @@ public:
     ~List();
 
     void push_back(T data);
+    void pop_front();
+    void clear();
     int getSize() { return Size; }
-
     T &operator[](const int index);
 
 private:
@@ -72,6 +73,24 @@ void List<T>::push_back(T data)
 }
 
 template <typename T>
+void List<T>::pop_front()
+{
+    Node<T> *temp = head;
+    head = head->pNext;
+    delete temp;
+    Size--;
+}
+
+template <typename T>
+void List<T>::clear()
+{
+    while (Size)
+    {
+        pop_front();
+    }
+}
+
+template <typename T>
 T &List<T>::operator[](const int index)
 {
     int counter = 0;
@@ -95,26 +114,55 @@ int main()
     setlocale(LC_ALL, "ru_RU.UTF-8");
 
     List<int> lst;
-/*     lst.push_back(5);
-    lst.push_back(10);
-    lst.push_back(22);
+    /*     lst.push_back(5);
+        lst.push_back(10);
+        lst.push_back(22);
 
-    cout << lst.getSize() << endl;
-    cout << lst[2] << endl; */
+        cout << lst.getSize() << endl;
+        cout << lst[2] << endl; */
 
     int numbersCount;
-    cout << "Сколько чисел?" << endl;
-    cin >> numbersCount;
+    lst.push_back(44);
+    lst.push_back(55);
+    lst.push_back(66);
+    lst.push_back(77);
+    lst.push_back(88);
+    lst.push_back(99);
 
-    for (int i = 0; i < numbersCount; i++)
-    {
-        lst.push_back(rand() % 10);
-    }
+    /*     for (int i = 0; i < numbersCount; i++)
+        {
+            lst.push_back(rand() % 10);
+        }
+
+        for (int i = 0; i < lst.getSize(); i++)
+        {
+            cout << lst[i] << endl;
+        } */
+
+    cout << endl
+         << "Элементов в списке " << endl
+         << lst.getSize() << " выполняю pop_front" << endl;
+
+    lst.pop_front();
 
     for (int i = 0; i < lst.getSize(); i++)
     {
         cout << lst[i] << endl;
     }
+
+    cout << endl
+         << "Элементов в списке" << endl
+         << lst.getSize() << endl;
+
+    cout << endl
+         << "Элементов в списке " << endl
+         << lst.getSize() << " выполняю clear" << endl;
+
+    lst.clear();
+
+    cout << endl
+         << "Элементов в списке" << endl
+         << lst.getSize() << endl;
 
     system("pause");
     return 0;
