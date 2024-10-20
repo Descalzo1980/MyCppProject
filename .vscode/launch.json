@@ -2,17 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(Windows) Launch",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "externalTerminal"
-        },
-        {
             "name": "g++ build and debug active file",
             "type": "cppdbg",
             "request": "launch",
@@ -25,7 +14,6 @@
             "MIMode": "gdb",
             "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
             "preLaunchTask": "g++ build active file",
-            "internalConsoleOptions": "openOnSessionStart",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

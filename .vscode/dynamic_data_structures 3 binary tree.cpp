@@ -40,44 +40,6 @@ using namespace std;
 
 */
 
-class MyBT {
-    struct Node {
-        int value;
-        Node* left;
-        Node* right;
-
-        Node(int val) : value(val), left(nullptr), right(nullptr) {}
-    };
-
-    Node* root;
-
-public:
-    MyBT() : root(nullptr) {}
-
-    void add(int value) {
-        root = addRecursive(root, value);
-    }
-
-    friend ostream& operator<<(ostream& os, const MyBT& tree) {
-        tree.printInOrder(os, tree.root);
-        return os;
-    }
-
-private:
-    Node* addRecursive(Node* current, int value) {
-        if (current == nullptr) {
-            return new Node(value);  // Создаем новый узел, если текущий пуст
-        }
-
-        if (value < current->value) {
-            current->left = addRecursive(current->left, value);  // Добавляем слева
-        } else if (value > current->value) {
-            current->right = addRecursive(current->right, value);  // Добавляем справа
-        }
-
-        return current;  // Возвращаем текущий узел
-    }
-};
 
 int main()
 {
@@ -92,8 +54,6 @@ int main()
     tree.add(15);
     tree.add(3);
     tree.add(7);
-
-    cout << tree << endl;
     
     system("pause");
     return 0;
