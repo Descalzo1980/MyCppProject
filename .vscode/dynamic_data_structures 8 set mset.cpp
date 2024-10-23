@@ -83,6 +83,12 @@ int main()
         cout << item << endl;
     }
 
+    auto it1 = myMs.lower_bound(1); // 1
+
+    auto it2 = myMs.upper_bound(1); // 2, следующее после 1
+
+    auto a = myMs.equal_range(1); // диапозон чисел
+
     system("pause");
     return 0;
 }
