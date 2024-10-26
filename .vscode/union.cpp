@@ -21,13 +21,17 @@ using namespace std;
   значение может быть
 
   актуальным в каждый момент времени
+
  */
 
 union Data
 {
-  int integer;
-  float floating;
-  char character;
+  int integer; // 4 байта
+  float floating; // 4 байта
+  char character; // 1 байт
+  short shorter; // 2 байта
+
+  // памяти выделается исходя из самого большое, если меньше, забивается нулями
 };
 
 int main()
@@ -47,6 +51,9 @@ int main()
 
   data.character = 'A';
   std::cout << "Character: " << data.character << std::endl;
+
+  data.shorter = 42;
+  std::cout << "Shorter: " << data.shorter << std::endl;
 
   system("pause");
   return 0;
