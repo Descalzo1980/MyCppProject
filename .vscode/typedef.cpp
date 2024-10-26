@@ -3,6 +3,7 @@
 #include <vector>
 
 typedef std::vector<int> int_vector;
+typedef std::vector<float> float_vector;
 
 /*
 typedef
@@ -21,6 +22,12 @@ int main()
   std::vector<int> myVector;
 
   int_vector myVector2;
+
+  for (size_t i = 0; i < myVector2.size(); i++)
+  {
+    /* size_t это тоже псевдоним */
+  }
+  
     
   system("pause");
   return 0;
