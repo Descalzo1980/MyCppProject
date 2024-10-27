@@ -13,17 +13,17 @@ using namespace std;
 
 */
 
-void DoWork(int &a)
+int Sum(int a, int b)
 {
+    this_thread::sleep_for(chrono::milliseconds(2000));
+
+    cout << "ID потока = " << this_thread::get_id() << " Sum Start" << endl;
+
     this_thread::sleep_for(chrono::milliseconds(5000));
 
-    cout << "ID потока = " << this_thread::get_id() << " DoWork Start" << endl;
+    cout << "ID потока = " << this_thread::get_id() << " Sum Stopped" << endl;
 
-    this_thread::sleep_for(chrono::milliseconds(4000));
-
-    a *= 2;
-
-    cout << "ID потока = " << this_thread::get_id() << " DoWork Stopped" << endl;
+    return a + b;
 }
 
 int main()
@@ -33,20 +33,21 @@ int main()
     SetConsoleOutputCP(65001);
     setlocale(LC_ALL, "ru_RU.UTF-8");
 
-    int q = 5;
+    int result;
+    auto f = [&result]()
+    {
+        result = Sum(2, 5);
+    };
+    thread t(f);
 
-    thread t(DoWork,std::ref(q));
-
-    for (size_t i = 0; i < 10; i++)
+    for (size_t i = 0; i <= 10; i++)
     {
         cout << "ID потока = " << this_thread::get_id() << "\tmain works\t" << i << endl;
         this_thread::sleep_for(chrono::milliseconds(500));
     }
 
-     t.join(); // 10, дождемся выполнения потока
-    //t.detach(); // 5, не дождемся результата
-
-    cout << q << endl;
+    t.join();
+    cout << "Sum result = " << result << endl;
 
     system("pause");
     return 0;
