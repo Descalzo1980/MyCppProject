@@ -64,8 +64,16 @@ int main()
     int result;
     MyClass m;
 
+    /*     thread t([&]()
+                 { result = m.Sum(2, 5); }); */
+
+    /*     thread t([&]()
+                 { m.DoWork(); });  это первый вариант*/
+
     thread t([&]()
-             { result = m.Sum(2, 5); });
+             { m.DoWork2(5); });
+
+    // thread t(&MyClass::DoWork2, m, 5); // это второй вариант
 
     for (size_t i = 0; i <= 10; i++)
     {
