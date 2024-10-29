@@ -25,7 +25,7 @@ mutex mtx;
 void Print(char ch)
 {
     this_thread::sleep_for(chrono::milliseconds(2000));
-/*     mtx.lock(); */
+    mtx.lock();
     for (int i = 0; i < 5; i++)
     {
         for (int i = 0; i < 10; i++)
@@ -37,7 +37,7 @@ void Print(char ch)
         cout << endl;
     }
     cout << endl;
-/*     mtx.unlock(); */
+    mtx.unlock();
     this_thread::sleep_for(chrono::milliseconds(2000));
 }
 
